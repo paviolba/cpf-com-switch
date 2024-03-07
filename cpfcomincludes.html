@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Cpf</title>
+</head>
+
+<body>
+
+    <label for="">Cpf</label>
+    <input type="text" id="icpf">
+    <button onclick="verificarCpf()">Verificar</button>
+
+    <script>
+
+        function verificarCpf() {
+            let cpf = $("#icpf").val().trim();
+            let numero = "0123456789";
+            let ponto = ".";
+            let traço = "-";
+            let caracter0 = cpf.charAt(0);
+            let caracter1 = cpf.charAt(1);
+            let caracter2 = cpf.charAt(2);
+            let caracter3 = cpf.charAt(3);
+            let caracter4 = cpf.charAt(4);
+            let caracter5 = cpf.charAt(5);
+            let caracter6 = cpf.charAt(6);
+            let caracter7 = cpf.charAt(7);
+            let caracter8 = cpf.charAt(8);
+            let caracter9 = cpf.charAt(9);
+            let caracter10 = cpf.charAt(10);
+            let caracter11 = cpf.charAt(11);
+            let caracter12 = cpf.charAt(12);
+            let caracter13 = cpf.charAt(13);
+
+            if (cpf.length != 14) {
+
+                document.write("Digite o cpf no formato XXX.XXX.XXX-XX");
+
+            } else if (numero.includes(caracter0) && numero.includes(caracter1) && numero.includes(caracter2) && ponto.includes(caracter3) && numero.includes(caracter4) && numero.includes(caracter5) && numero.includes(caracter6) && ponto.includes(caracter7) && numero.includes(caracter8) && numero.includes(caracter9) && numero.includes(caracter10) && traço.includes(caracter11) && numero.includes(caracter12) && numero.includes(caracter13)) {
+
+                document.write("Formato de Cpf válido");
+
+            } else
+                document.write("Formato inválido: Por favor, digite no formato XXX.XXX.XXX-XX");
+        }
+
+
+
+
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+
+</html>
